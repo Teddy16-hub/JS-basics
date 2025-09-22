@@ -1,0 +1,9 @@
+function basketballEquipment(annualFee)
+{
+  let sneakers = annualFee - (0.4 * annualFee);
+  let clothes = sneakers - (0.2*sneakers);
+  let ball = (1/4)*clothes;
+  let accessories = (1/5)*ball;
+  let totalSum = annualFee + sneakers + clothes + ball + accessories;
+  console.log(totalSum);
+}
