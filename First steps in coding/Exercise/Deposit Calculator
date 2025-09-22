@@ -1,0 +1,6 @@
+function depositCalculator(depositedSum, montlyDeposit, annualInterest)
+{
+  let annualInterestPercent = annualInterest / 100;
+  let totalSum = depositedSum + montlyDeposit * ((depositedSum * annualInterestPercent)/12);
+  console.log(totalSum);
+}
