@@ -1,0 +1,6 @@
+function petShop(dogFoodPackages, catFoodPackages) {
+    const dogFoodPrice = 2.50;
+    const catFoodPrice = 4.00;
+    const totalCost = (dogFoodPackages * dogFoodPrice) + (catFoodPackages * catFoodPrice);
+    console.log(`Total cost: ${totalCost} lv`);
+}
