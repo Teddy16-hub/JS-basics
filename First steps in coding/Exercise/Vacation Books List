@@ -1,0 +1,6 @@
+function obligationalBooks(numOfPages, pagesPerHour, daysToRead)
+{
+  let totalReadingTime = numOfPages / pagesPerHour;
+  let hoursPerDay  = totalReadingTime / daysToRead;
+  console.log(hoursPerDay);
+}
