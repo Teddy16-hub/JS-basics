@@ -1,0 +1,5 @@
+function radiantsToDegrees(radiants)
+{
+  let degrees = radiants *180/Math.PI;
+  console.log(degrees);
+}
