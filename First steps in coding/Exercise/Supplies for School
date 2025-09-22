@@ -1,0 +1,10 @@
+function schoolSupplies(packOfPens, packOfMarkers, detergent, discount)
+{
+  let discountPercent = discount / 100;
+  let pensPrice = packOfPens * 5.8;
+  let markersPrice = packOfMarkers * 7.2;
+  let detergentPrice  = detergent * 1.2;
+  let totalPrice = pensPrice + markersPrice + detergentPrice;
+  let totalPriceAfterDiscount = totalPrice - (totalPrice * discountPercent);
+  console.log(totalPriceAfterDiscount);
+}
