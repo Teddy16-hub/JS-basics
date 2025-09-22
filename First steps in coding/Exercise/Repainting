@@ -1,0 +1,11 @@
+function repainting(nylon, paint, thinner, hours)
+{
+  let paintPercent = paint /10;
+  let nylonPrice = (nylon + 2)*1.5;
+  let paintPrice = (paint + paintPercent) *14.5;
+  let thinnerPrice = thinner*5;
+  let materialsPrice = nylonPrice + paintPrice + thinnerPrice + 0.4;
+  let workersPrice = (materialsPrice* 0.3)*hours;
+  let totalPrice = materialsPrice + workersPrice;
+  console.log(totalPrice);
+}
