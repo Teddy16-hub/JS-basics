@@ -1,0 +1,6 @@
+function projectsCreation(name, numOfProjects)
+{
+    let timeForAProject = 3;
+    let projectsTime = timeForAProject * numOfProjects;
+    console.log(`The architect ${name} will need ${projectsTime} hours to complete ${numOfProjects} project/s.`);
+}
