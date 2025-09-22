@@ -1,0 +1,8 @@
+function yardGardening (squareMeters)
+{
+    let landscaping = squareMeters * 7.61;
+    let discount = landscaping * 0.18;
+    let finalPrice = landscaping - discount;
+    console.log(`The final price is: ${finalPrice} lv.`);
+    console.log(`The discount is: ${discount} lv.`);
+}
