@@ -1,0 +1,20 @@
+function shopping(budget, videocard, processor, ram) {
+    let totalVideocard = videocard * 250;
+    let totalProcessor = processor * (0.35 * totalVideocard);
+    let totalRam = ram * (0.10 * totalVideocard);
+    
+    let totalSum = totalVideocard + totalProcessor + totalRam;
+
+    // Apply discount directly
+    if (videocard > processor) {
+        totalSum *= 0.85;
+    }
+
+    if (budget >= totalSum) {
+        let moneyLeft = (budget - totalSum).toFixed(2);
+        console.log(`You have ${moneyLeft} leva left!`);
+    } else {
+        let neededMoney = (totalSum - budget).toFixed(2);
+        console.log(`Not enough money! You need ${neededMoney} leva more!`);
+    }
+}
