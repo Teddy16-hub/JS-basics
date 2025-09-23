@@ -1,0 +1,20 @@
+function areaOfFigures(shape, firstNum, secondNum) {
+    let area = 0;
+    if (shape == "square") 
+    {
+        area = firstNum * firstNum;
+    }
+    else if (shape == "rectangle") 
+    {
+        area = firstNum * secondNum;
+    } 
+    else if (shape == "triangle") 
+    {
+        area = firstNum *secondNum /2;
+    }
+    else if (shape == "circle") 
+    {
+        area = Math.PI * firstNum * firstNum;
+    }
+    console.log(area.toFixed(3));
+}
