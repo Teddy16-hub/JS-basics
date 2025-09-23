@@ -1,0 +1,27 @@
+function bonusScore (number)
+{
+    let bonus = 0.0;
+    let score = bonus + number;
+    if(number <=  100)
+    {
+        bonus = 5;
+    }
+    else if(number > 1000)
+    {
+        bonus = 0.1 * number;
+    }
+    else
+    {
+        bonus = 0.2*number;
+    }
+    if(number % 2 == 0)
+    {
+        bonus += 1;
+    }
+    else if(number % 10 == 5)
+    {
+        bonus += 2;
+    }
+    console.log(bonus);
+    console.log(score + bonus);
+}
