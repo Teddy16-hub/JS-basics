@@ -1,0 +1,15 @@
+function worldSwimmingRecord(recordInSeconds, distanceInMeters, timeInSecondsPerMeter) 
+{
+    let totalSeconds = distanceInMeters * timeInSecondsPerMeter;
+    let slowingDown = Math.floor(distanceInMeters / 15) *12.5;
+    let totalTime = totalSeconds + slowingDown;
+    if (totalTime < recordInSeconds) 
+    {
+        console.log(`Yes, he succeeded! The new world record is ${totalTime.toFixed(2)} seconds.`);
+    } 
+    else 
+    {
+        let neededTime = (totalTime - recordInSeconds).toFixed(2);
+        console.log(`No, he failed! He was ${neededTime} seconds slower.`);
+    }
+}
