@@ -1,0 +1,16 @@
+function lunchBreak(showName, episodeDuration, breakDuration) {
+    let lunchTime = breakDuration * 1/8;
+    let recreationTime = breakDuration * 1/4;
+    let timeLeftForTheShow = breakDuration - lunchTime - recreationTime;
+    
+    if (timeLeftForTheShow >= episodeDuration) 
+    {
+        let timeLeft = Math.ceil(timeLeftForTheShow - episodeDuration);
+        console.log(`You have enough time to watch ${showName} and left with ${timeLeft} minutes free time.`);
+    } 
+    else
+    {
+        let neededTime = Math.ceil(episodeDuration - timeLeftForTheShow);
+        console.log(`You don't have enough time to watch ${showName}, you need ${neededTime} more minutes.`);
+    }
+}
