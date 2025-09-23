@@ -1,0 +1,21 @@
+function timePlus15Minutes(hours, minutes)
+{ 
+    let currMinutes = minutes + 15;
+    if(currMinutes >59)
+    {
+        hours = hours +1;
+        currMinutes -= 60;
+    }
+    if(hours > 23)
+    {
+        hours -=24;
+    }
+    if(currMinutes < 10)
+    {
+        console.log(`${hours}:0${currMinutes}`);
+    }
+    else
+    {
+        console.log(`${hours}:${currMinutes}`);
+    }
+}
