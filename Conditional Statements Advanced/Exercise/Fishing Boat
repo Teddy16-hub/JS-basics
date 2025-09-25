@@ -1,0 +1,66 @@
+function fishingBoat(budget, season, numOfFishers)
+{
+    let price = 0; 
+    if(season == 'Spring')
+    {
+        price = 3000;
+        if( numOfFishers <= 6)
+        {
+            price *= 0.9;
+        }
+        else if( numOfFishers <= 11)
+        {
+            price *= 0.85;
+        }
+        else
+        {
+            price *= 0.75;
+        }
+    }
+    else if(season == 'Summer' || season == 'Autumn')
+    {
+        price = 4200;
+        if( numOfFishers <= 6)
+        {
+            price *= 0.9;
+        }
+        else if( numOfFishers <= 11)
+        {
+            price *= 0.85;
+        }
+        else
+        {
+            price *= 0.75;
+        }
+    }
+    else if(season == 'Winter')
+    {
+        price = 2600;
+        if( numOfFishers <= 6)
+        {
+            price *= 0.9;
+        }
+        else if( numOfFishers <= 11)
+        {
+            price *= 0.85;
+        }
+        else
+        {
+            price *= 0.75;
+        }
+    }
+    if(numOfFishers % 2 == 0 && season !== "Autumn")
+    {
+        price *= 0.95;
+    }
+    if(budget >= price)
+    {
+        let moneyLeft = (budget - price).toFixed(2);
+        console.log(`Yes! You have ${moneyLeft} leva left.`);
+    }
+    else
+    {
+        let neededMoney = (price - budget).toFixed(2);
+        console.log(`Not enough money! You need ${neededMoney} leva.`)
+    }
+}
