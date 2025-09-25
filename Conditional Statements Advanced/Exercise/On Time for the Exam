@@ -1,0 +1,33 @@
+function onTimeForheExam(examHour, examMinute, arrivingHour, arrivingMinute)
+{
+    let examTime = examHour * 60 + examMinute;
+    let arrivalTime = arrivingHour * 60 + arrivingMinute;
+    let difference = arrivalTime - examTime;
+    if (difference > 0) 
+    {
+        console.log("Late");
+    } 
+    else if (difference >= -30) 
+    {
+        console.log("On time");
+    } 
+    else 
+    {
+        console.log("Early");
+    }
+     if (difference !== 0) 
+     {
+        let absDiff = Math.abs(difference);
+        let hours = Math.floor(absDiff / 60);
+        let minutes = absDiff % 60;
+        let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+       if (hours > 0) 
+       {
+            console.log(`${hours}:${formattedMinutes} hours ${difference > 0 ? 'after' : 'before'} the start`);
+        } 
+        else 
+        {
+            console.log(`${minutes} minutes ${difference > 0 ? 'after' : 'before'} the start`);
+        }
+    }
+}
