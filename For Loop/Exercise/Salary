@@ -1,0 +1,27 @@
+function salary(input)
+{
+    let numOfOpenTabs = input[0];
+    let salary = input[1];
+    for(let i = 2; i < numOfOpenTabs + 2; i++)
+    {
+        let websiteName = input[i];
+        if(websiteName == 'Facebook')
+        {
+            salary -= 150;
+        }
+        else if(websiteName == 'Instagram')
+        {
+            salary -= 100;
+        }
+        else if(websiteName == 'Reddit')
+        {
+            salary -= 50;
+        }
+    }
+    if(salary <= 0)
+    {
+        console.log("You have lost your salary.");
+        return;
+    }
+    console.log(salary);
+}
