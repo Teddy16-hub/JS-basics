@@ -1,0 +1,43 @@
+function histogram(n)
+{
+    let nums = n[0];
+    let p1 = 0;
+    let p2 = 0;
+    let p3 = 0;
+    let p4 = 0;
+    let p5 = 0;
+    for(let i = 1; i <= nums; i++)
+    {
+        let currNum = n[i];
+        if(currNum < 200)
+        {
+            p1++;
+        }
+        else if(currNum <= 399)
+        {
+            p2++;
+        }
+        else if(currNum <= 599)
+        {
+            p3++;
+        }
+        else if(currNum <= 799)
+        {
+            p4++;
+        }
+        else
+        {
+            p5++;
+        }
+    }
+    let percent1 = ((p1/nums)*100).toFixed(2);
+    let percent2 = ((p2/nums)*100).toFixed(2);
+    let percent3 = ((p3/nums)*100).toFixed(2);
+    let percent4 = ((p4/nums)*100).toFixed(2);
+    let percent5 = ((p5/nums)*100).toFixed(2);
+    console.log(`${percent1}%`);
+    console.log(`${percent2}%`);
+    console.log(`${percent3}%`);
+    console.log(`${percent4}%`);
+    console.log(`${percent5}%`);
+}
