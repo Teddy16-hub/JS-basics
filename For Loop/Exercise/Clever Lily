@@ -1,0 +1,27 @@
+function cleverLily(age, washerPrice, toyPrice)
+{
+    let savedMoney = 0;
+    let birthdayMoney = 10;
+    for(let i = 1; i <= age; i++)
+    {
+        if(i % 2 == 0)
+        {
+            savedMoney += birthdayMoney - 1;
+            birthdayMoney += 10;
+        }
+        else
+        {
+            savedMoney += toyPrice; 
+        }
+    }
+    if(savedMoney >= washerPrice)
+    {
+        let moneyLeft = (savedMoney - washerPrice).toFixed(2);
+        console.log(`Yes! ${moneyLeft}`);
+    }
+    else
+    {
+        let neededMoney = (washerPrice - savedMoney).toFixed(2);
+        console.log(`No! ${neededMoney}`);
+    }
+}
