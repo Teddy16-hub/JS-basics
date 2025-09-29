@@ -1,0 +1,17 @@
+function minNumber(input)
+{
+    let index = 0;
+    let i = input[index];
+    let maxNum = Number.MAX_SAFE_INTEGER;
+    while(i !== 'Stop')
+    {
+        let currNum = Number(i);
+        if(currNum < maxNum)
+        {
+            maxNum = currNum;
+        }
+        index++;
+        i = input[index];
+    }
+    console.log(maxNum);
+}
