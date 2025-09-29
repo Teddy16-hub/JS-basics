@@ -1,0 +1,39 @@
+function vacation(input)
+{
+    let neededMoney = Number(input[0]);
+    let presentMoney = Number(input[1]);
+    let spendDays = 0; 
+    let totalDays = 0
+    let index = 2;
+    while(presentMoney < neededMoney)
+    {
+        let action = input[index];
+        let money = Number(input[index+1]);
+        totalDays++;
+        if(action == 'spend')
+        {
+            presentMoney -= money;
+            if (presentMoney < 0) 
+            {
+                presentMoney = 0;
+            }
+            spendDays++;
+        }
+        else if(action == 'save')
+        {
+           presentMoney += money;
+            spendDays = 0;
+        }
+        if(spendDays >= 5)
+        {
+            console.log("You can't save the money.");
+            console.log(`${totalDays}`);
+            return;
+        }
+        index += 2;
+        if(presentMoney >= neededMoney)
+        {
+            console.log(`You saved the money for ${totalDays} days.`)
+        }
+    }
+}
