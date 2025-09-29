@@ -1,0 +1,22 @@
+function cake(input)
+{
+    let width = Number(input[0]);
+    let length = Number(input[1]);
+    let pieceCount = width* length;
+    let index = 2;
+    let command = input[index];
+    while(command !== 'STOP')
+    {
+        let piecesEaten = Number(command);
+        pieceCount -= piecesEaten;
+        if(pieceCount <= 0)
+        {
+            let piecesNeeded = Math.abs(pieceCount);
+            console.log(`No more cake left! You need ${piecesNeeded} pieces more.`);
+            return;
+        }
+        index++;
+        command = input[index];
+    }
+    console.log(`${pieceCount} pieces are left.`);
+}
