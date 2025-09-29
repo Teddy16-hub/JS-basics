@@ -1,0 +1,35 @@
+function examPrep(input) 
+{
+    let unpleasantGrades = Number(input[0]);
+    let index = 1;
+    let currBadGrades = 0;
+    let gradeCount = 0;
+    let gradeSum = 0;
+    let lastProblemName = '';
+    let command = input[index];
+    while (input[index] !== "Enough") 
+    {
+        let problemName = command;
+        index++;
+        let grade = Number(input[index]);
+
+        if (grade <= 4) 
+        {
+            currBadGrades++;
+            if (currBadGrades === unpleasantGrades) 
+            {
+                console.log(`You need a break, ${currBadGrades} poor grades.`);
+                return;
+            }
+        }
+        gradeCount++;
+        gradeSum += grade;
+        lastProblemName = problemName;
+        index++;
+        command = input[index];
+    }
+    let averageScore = (gradeSum / gradeCount).toFixed(2);
+    console.log(`Average score: ${averageScore}`);
+    console.log(`Number of problems: ${gradeCount}`);
+    console.log(`Last problem: ${lastProblemName}`);
+}
