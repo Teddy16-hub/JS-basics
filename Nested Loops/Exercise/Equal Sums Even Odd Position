@@ -1,0 +1,28 @@
+function equalSumsEvenOddPosition(startNum, endNum)
+{
+    let result = '';
+    for(let currNum = startNum; currNum <= endNum; currNum++)
+    {
+        let evenPosSum = 0;
+        let oddPosSum = 0;
+        let currNumAsStr = String(currNum);
+        for(let i = 0; i < currNumAsStr.length; i++)
+        {
+            let currDigit = Number(currNumAsStr[i]);
+            if(i % 2 == 0)
+            {
+                evenPosSum += currDigit;
+            }
+            else
+            {
+                oddPosSum += currDigit;
+            }
+        }
+        if(evenPosSum == oddPosSum)
+        {
+            result += currNum + ' ';
+        }
+    }
+    console.log(result);
+    
+}
