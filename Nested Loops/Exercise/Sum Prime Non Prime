@@ -1,0 +1,39 @@
+function sumPrimeNonPrimeNumbers(input)
+{
+    let sumPrimeNum = 0;
+    let sumNonPrimeNum = 0;
+    let index = 0; 
+    let command = input[index];
+    while(command!== 'stop')
+    {
+        let currNum = Number(command);
+        if(currNum < 0)
+        {
+            console.log("Number is negative.");
+            index++;
+            command = input[index];
+            continue;
+        }
+        let isPrime = true;
+        for(let divisor = 2; divisor < currNum; divisor++)
+        {
+            if(currNum% divisor == 0)
+            {
+                isPrime = false;
+                break;
+            }
+        }
+        if(isPrime)
+        {
+            sumPrimeNum += currNum;
+        }
+        else
+        {
+            sumNonPrimeNum += currNum;
+        }
+        index++;
+        command = input[index];
+    }
+    console.log(`Sum of all prime numbers is: ${sumPrimeNum}`);
+    console.log(`Sum of all non prime numbers is: ${sumNonPrimeNum}`);
+}
