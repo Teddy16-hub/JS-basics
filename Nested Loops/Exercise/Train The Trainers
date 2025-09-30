@@ -1,0 +1,27 @@
+function trainTheTrainers(input)
+{
+    let judgeCount = Number(input[0]);
+    let index = 1;
+    let command = input[index];
+    let totalGradeSum = 0;
+    let presentationCount = 0;
+    while(command !== 'Finish')
+    {
+        let presentationName = command;
+        let currGradeSum = 0;
+        for(let currJudge = 1; currJudge <= judgeCount; currJudge++)
+        {
+            index++;
+            let currGrade = Number(input[index]);
+            currGradeSum += currGrade;
+        }
+        let avrPresentationGrade = currGradeSum / judgeCount;
+        console.log(`${presentationName} - ${avrPresentationGrade.toFixed(2)}.`);
+        totalGradeSum += avrPresentationGrade;
+        presentationCount++;
+        index++;
+        command = input[index];
+    }
+    let finalAvgGrade = totalGradeSum / presentationCount;
+    console.log(`Student's final assessment is ${finalAvgGrade.toFixed(2)}.`);
+}
