@@ -1,0 +1,32 @@
+function sumOfTwoNumbers(start, end, magicNum)
+{
+    let combinationsNum = 0; 
+    let combinationFound = false;
+    let i = 0; 
+    let j = 0; 
+    for(i = start; i <= end; i++)
+    {
+        for(j = start; j <= end; j++)
+        {
+            combinationsNum++;
+            let sum = i + j;
+            if(sum == magicNum)
+            {
+                combinationFound = true;
+                break;
+            }
+        }
+        if(combinationFound)
+        {
+            break;
+        }
+    }
+    if(combinationFound)
+    {
+        console.log(`Combination N:${combinationsNum} (${i} + ${j} = ${magicNum})`);
+    }
+    else
+    {
+        console.log(`${combinationsNum} combinations - neither equals ${magicNum}`);
+    }
+}
